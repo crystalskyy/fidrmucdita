@@ -340,8 +340,9 @@ div p {
 
 @font-face {
 	font-family: 'FairProsper';
-	src: url('fonts/FairProsper.ttf') format('ttf');
+	src: url('fonts/FairProsper.ttf') format('truetype');
 
 }
+
 
 
