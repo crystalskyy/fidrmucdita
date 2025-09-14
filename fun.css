@@ -1,0 +1,344 @@
+body {
+	position: relative;
+    background-color: #874daa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* SIDEBAR dio koda ------------------------------------------------------------------*/
+:root{
+  --panel: #692773; /* treća ljubičasta */
+  --text: #ffffff; /* bijeli tekst */
+}
+
+/* Toggle */
+#nav-toggle {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.menu-toggle {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	width: 40px;
+	height: 40px;
+	z-index: 1001;
+	cursor: pointer;
+	display: grid;
+	place-items: center;
+	user-select: none;
+}
+
+.menu-toggle .menu-star {
+	width: 50px;
+	height: auto;
+	display: block;
+	transition: opacity .2s ease;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.menu-toggle .close-icon {
+	position: absolute;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	font-size: 36px;
+	line-height: 1;
+	color: var(--text);
+	opacity: 0;
+	transition: opacity .2s ease;
+}
+
+#nav-toggle:checked + .menu-toggle .menu-star { opacity: 0; }
+#nav-toggle:checked + .menu-toggle .close-icon { opacity: 1; }
+
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: auto;
+	width: 300px;
+	background: var(--panel);
+	padding-top: 60px;
+	padding-bottom: 24px;
+	transform: translateX(-100%);
+	transition: transform .3s ease;
+	z-index: 1000;
+	box-shadow: 12px 0 22px -12px rgba(0,0,0,.55), /* desni shadow */0 16px 28px -12px rgba(0,0,0,.50); /* donji shadow */
+}
+
+#nav-toggle:checked ~ .sidebar {
+	transform: translateX(0);
+}
+
+.menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu li { margin: 0; }
+
+.menu a {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	padding: 22px 26px;
+	text-decoration: none;
+	color: var(--text);
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: lowercase;
+}
+
+
+.star-icon {
+	width: 40px;
+	height: 40px;
+	flex: 0 0 36px;
+	object-fit: contain;
+	filter: none;
+}
+
+
+.menu a:hover, .menu a:focus {
+	text-decoration: underline;
+	text-underline-offset: 6px;
+	text-decoration-thickness: 2px;
+	outline: none;
+}
+
+
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 100px;
+	margin-top: 100px;
+	padding: 0 100px;
+}
+
+#probnizmaj {
+	max-width: 1000px;
+	height: auto;
+}
+
+
+#ime {
+	color: #23052a;
+	font-size: 140px;
+	font-family: 'Fair Prosper';
+}
+
+#opis {
+	color: #23052a;
+	font-size: 32px;
+}
+
+p {
+	font-family: 'Cheese Burger Extended Vol2';
+}
+
+.me {
+	margin-top: 0px;
+	text-align: right;
+}
+
+
+.sredina {
+	display: grid;
+	grid-template-columns: minmax(160px, 240px) 1fr minmax(160px, 240px);
+	gap: 64px;
+	padding: 0;
+	align-items: start;
+}
+
+
+.dragon {
+	display: flex;
+	align-self: center;
+}
+.dragon.left {
+	justify-content: flex-start;
+}
+.dragon.right {
+	justify-content: flex-end;
+}
+
+
+.dragon img {
+	width: 155px;
+	height: auto;
+}
+
+
+.objave {
+	padding: 40px 0 64px;
+	display: flex;
+	flex-direction: column;
+	align-items: top;
+}
+
+.objave-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 50px;
+	width: 800px;
+	margin: 0 auto;
+}
+  
+.objave-grid .stupac {
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
+}
+
+.objave-grid .desnistupac { 
+	padding-top: 120px;
+}
+
+
+.jednaobjava {
+	display: block;
+	line-height: 0;
+	overflow: hidden;
+	text-decoration: none;
+	transition: transform .2s ease, box-shadow .2s ease;
+}
+.jednaobjava:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 16px 36px rgba(0,0,0,.14)
+}
+
+.jednaobjava img {
+	display: block;
+	width: 100%;
+	height: auto;
+	box-shadow: 0 10px 24px rgba(0,0,0,.12);
+	object-fit: cover;
+	display: block;
+}
+
+
+
+.clouds {
+	width: 100%;
+	position: relative;
+	bottom: 0;
+	left: 0;
+}
+
+.oldwork {
+	position: absolute;
+	bottom: 750px;
+	opacity: 0;
+	font-family: 'Cheese Burger Extended Vol2';
+	font-size: 20px;
+	margin-left: 400px;
+	z-index: 10;
+}
+	
+a.oldwork:hover {
+	opacity: 1;
+	color:#23052a;
+}
+
+
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 400px;
+	margin-top: 50px;
+}
+.knjige{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0px;
+	margin-bottom: 50px;
+}
+
+.zasebna{
+	width: auto;
+	height: 350px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.zasebna:hover {
+	transform: translateY(-60px);
+}
+
+
+.contact {
+	position: relative;
+	text-align: center;
+	margin-bottom: 65px;
+}
+
+.socials {
+	margin-top: 50px;
+}
+
+div p {
+	margin: 5px 0;
+}
+
+#findme {
+	color: #23052a;
+	font-size: 76px;
+}
+
+ a:link {color: #23052a; text-decoration: none;} a:visited {color: #23052a;}
+
+.sidebar .menu a:link,
+.sidebar .menu a:visited {
+	color: #fff;
+	font-family: 'Cheese Burger Extended Vol2';
+}
+
+#mail {
+	font-size: 45px;
+	margin-top: 20px;
+	font-family: 'Cheese Burger Extended Vol2';
+}
+
+#insta, #tt, #cv, #lin {
+	font-size: 45px;
+	font-family: 'Cheese Burger Extended Vol2';
+}
+
+#insta {
+	margin-top: 40px;
+	margin-right: 30px;
+}
+
+#tt {
+	margin-right: 30px;
+}
+
+#cv {
+	margin-right: 30px;
+}
+
+@font-face {
+	font-family: 'Cheese Burger Extended Vol2';
+	src: url('fonts/CheeseBurgerExtendedVol2.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Fair Prosper';
+	src: url('fonts/Fair Prosper.ttf') format('ttf');
+}

@@ -1,0 +1,98 @@
+body {
+	font-family: 'Cheese Burger Extended Vol2';
+	background-color: #7D3C98;
+	color: #A970C4;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100vh;
+}
+
+.glavnidiv {
+	width: 90%;
+	max-width: 1000px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+	margin-top: 50px;
+}
+
+.intro {
+	font-size: 24px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+	color: #23052A;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	font-size: 22px;
+	margin: 10px 0 5px;
+	color: #23052A;
+}
+
+input, textarea {
+	width: calc(100% - 20px);
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	font-family: 'Cheese Burger Extended Vol2';
+	margin-bottom: 15px;
+	background: #E5B9E5;
+	color: #23052A;
+	resize: vertical;
+}
+
+textarea {
+	min-height: 100px;
+	max-height: 500px;
+	resize: vertical;
+	overflow-wrap: break-word;
+}
+
+input::placeholder, textarea::placeholder {
+	color: #A970C4;
+}
+
+button {
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border-radius: 20px;
+	font-size: 18px;
+	background: #E5B9E5;
+	color: #23052A;
+	cursor: pointer;
+	transition: background 0.3s ease;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+button:hover {
+	background: #C594D2;
+}
+
+a.one{
+	color: #A970C4;
+	font-family: 'Cheese Burger Extended Vol2';
+	font-size: 20px;
+	padding: 50px 50px 50px 0px; /*ne radi padding za top*/
+	text-decoration:none;
+}
+
+a.one:hover{
+	text-decoration: underline;
+	text-underline-offset: 6px;
+	text-decoration-thickness: 2px;
+}
+
+
+@font-face {
+	font-family: 'Cheese Burger Extended Vol2';
+	src: url('fonts/CheeseBurgerExtendedVol2.otf') format('opentype');
+}
