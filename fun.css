@@ -130,7 +130,7 @@ body {
 }
 
 #probnizmaj {
-	max-width: 1000px;
+	max-width: 700px;
 	height: auto;
 }
 
@@ -343,3 +343,4 @@ div p {
 	src: url('fonts/FairProsper.ttf') format('ttf');
 
 }
+
