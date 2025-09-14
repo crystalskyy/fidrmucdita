@@ -341,8 +341,10 @@ div p {
 @font-face {
 	font-family: 'FairProsper';
 	src: url('fonts/FairProsper.ttf') format('truetype');
+		url('fonts/FairProsper.woff2') format('woff2');
 
 }
+
 
 
 
