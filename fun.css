@@ -138,7 +138,7 @@ body {
 #ime {
 	color: #23052a;
 	font-size: 140px;
-	font-family: 'Fair Prosper';
+	font-family: 'FairProsper';
 }
 
 #opis {
@@ -343,6 +343,7 @@ div p {
 	src: url('fonts/FairProsper.woff2') format('woff2');
 
 }
+
 
 
 
